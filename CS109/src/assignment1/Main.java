@@ -7,6 +7,26 @@ Part 2: Allow User to Choose
     - Take user input of integer type
     - This value is the upper limit of the search for perfect numbers
     - Change the data type to allow larger numbers
+
+Sources:    
+
+    Fulton, R. (2021, December 30) Comments in Java: Syntax & Example. Study.com. 
+        https://study.com/academy/lesson/comments-in-java-syntax-example.html
+    
+    Meinecke, L. (2023, August 23) Java: If Statements. Study.com. 
+        https://study.com/academy/lesson/java-if-statements.html
+        
+    Gibbs, M. (2023, August 23) Nested For Loops in Java. Study.com. 
+        https://study.com/academy/lesson/nested-for-loops-in-java.html
+
+    Gibbs, M. (2023, June 3) Java Data Types: Short, Int & Long. Study.com. 
+        https://study.com/academy/lesson/java-data-types-short-int-long.html
+
+    Nieradko, M. (2024, June 30) Standard Input Methods in Java. Study.com. 
+        https://study.com/academy/lesson/using-stdin-for-standard-input-in-java.html
+
+    GeeksforGeeks. (2016, February 9). Scanner Class in Java. GeeksforGeeks. 
+        https://www.geeksforgeeks.org/java/scanner-class-in-java/
 */
 
 package assignment1;
