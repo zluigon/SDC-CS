@@ -9,6 +9,8 @@ Part 2: Allow User to Choose
     - Change the data type to allow larger numbers
 */
 
+package assignment1;
+
 // import scanner class for user input
 import java.util.Scanner;
 
@@ -24,7 +26,7 @@ public class Main {
         // store user input as long data type
         long userInput = input.nextLong();
 
-        // displaying perfect numbers found2
+        // displaying perfect numbers found
         System.out.println("Perfect numbers between 1 and " + userInput + " are:");
 
         // loop through numbers from 1 to userInput
