@@ -9,11 +9,26 @@ Part 2: Allow User to Choose
     - Change the data type to allow larger numbers
 */
 
+// import scanner class for user input
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        // loop through numbers from 1 to 200
-        for (int i = 1; i <= 200; i++) {
+        // creating scanner object for user input
+        Scanner input = new Scanner(System.in);
+
+        // prompt user for upper limit
+        System.out.println("Enter an upper limit to search for perfect numbers:");
+
+        // store user input as long data type
+        long userInput = input.nextLong();
+
+        // displaying perfect numbers found2
+        System.out.println("Perfect numbers between 1 and " + userInput + " are:");
+
+        // loop through numbers from 1 to userInput
+        for (int i = 1; i <= userInput; i++) {
             // variable to store sum of divisors
             int sum = 0;
 
@@ -28,9 +43,12 @@ public class Main {
 
             // if sum (of divisors) equals i, i is a perfect number
             if (sum == i) {
-                System.out.println(i + " is a perfect number.");
+                System.out.println(i);
             }
 
         }
+
+        // closing input scanner
+        input.close();
     }
 }
