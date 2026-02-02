@@ -50,16 +50,24 @@ public class Main {
         System.out.println("Perfect numbers between 1 and " + userInput + " are:");
 
         // loop through numbers from 1 to userInput
-        for (int i = 1; i <= userInput; i++) {
+        for (long i = 1; i <= userInput; i++) {
             // variable to store sum of divisors
-            int sum = 0;
+            long sum = 1; // 1 is always a divisor (except for 1 itself)
 
-            // nested loop to find divisors of i
-            for (int j = 1; j < i; j++) {
+            // skip 1 as it's not a perfect number
+            if (i == 1)
+                continue;
 
-                // if j is a divisor of i, add to sum
+            // optimized loop: only check divisors up to sqrt(i)
+            for (long j = 2; j * j <= i; j++) {
+
+                // if j is a divisor of i, add both j and i/j to sum
                 if (i % j == 0) {
                     sum = sum + j;
+                    // add the paired divisor if it's different from j
+                    if (j != i / j) {
+                        sum = sum + (i / j);
+                    }
                 }
             }
 
