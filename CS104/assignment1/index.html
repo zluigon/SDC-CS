@@ -9,14 +9,98 @@ Links to other pages (to be developed in future assignments)
 Simple CSS styling such as colors, fonts, and layout using CSS classes
  -->
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
+
+<!-- Sources:
+  
+  Machajewski, S. (2021, September 15) What is an HTML Document? - Structure, Types & Examples. Study.com. https://study.com/academy/lesson/what-is-an-html-document-structure-types-examples.html
+
+  Aravindan, S. (2021, September 29) HTML 5 Document Structure: Elements & Examples. Study.com. https://study.com/academy/lesson/html-5-document-structure-elements-examples.html
+
+  Kornarakis, I. (2018, December 21) The HTML 5 Canvas: Definition, Purpose & Examples. Study.com. https://study.com/academy/lesson/the-html-5-canvas-definition-purpose-examples.html
+
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- </head>
- <body>
-    <div>TEST</div>
- </body>
- </html>
+
+    <style>
+        body {
+            background: #f8f5d7;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .introduction,
+        .services,
+        .contact {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav>
+        <img class="logo" src="restaurant-logo.png" alt="Business Logo">
+        <h1>Catering Business</h1>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="introduction">
+        <h2>Welcome to Our Catering Business</h2>
+        <p>We are dedicated to providing delicious and high-quality catering services for all events.
+        </p>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Event Catering</li>
+            <li>Corporate Catering</li>
+            <li>Wedding Catering</li>
+            <li>Private Party Catering</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>For more information, please visit our contact page.</p>
+        <a href="contact.html">Contact Page</a>
+    </section>
+</body>
+
+</html>
