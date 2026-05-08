@@ -1,0 +1,30 @@
+body {
+	background: #f8f5d7;
+	font-family: Arial, sans-serif;
+}
+
+.logo {
+	width: 100px;
+	height: auto;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	gap: 20px;
+}
+
+.introduction,
+.services,
+.contact {
+	margin: 20px;
+	padding: 20px;
+	border-radius: 8px;
+}
