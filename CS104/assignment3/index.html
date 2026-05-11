@@ -1,0 +1,145 @@
+<!-- CS104: Intro to Web Development
+
+    Assignment 1: Develop a homepage for a business of your choice. Your page must contain:
+        - HTML structure
+        - A business logo/placeholder image should be displayed using the <img> tag
+        - An introduction about the business using different HTML elements
+        - A list of services/features in an unordered list
+        - Links to other pages (to be developed in future assignments)
+        - Simple CSS styling such as colors, fonts, and layout using CSS classes
+
+    Assignment 2: You will be adding to your fictional business, including:
+        - At least three pages: Home, Services, and Contact.
+        - A navigation bar that adapts to mobile and desktop views.
+        - Styling: All done with external CSS stylesheets and classes.
+        - Application of web accessibility standards, including alt text for images and proper use of form labels.
+
+    Assignment 3: You will improve the previously developed multi-page business website by adding interactivity using JavaScript.
+    Requirements include:
+       - Implementation of a dynamic image gallery on the 'Services' page using JavaScript to display images.
+       - Addition of form validation to the 'Contact' page to ensure users fill out required fields correctly and receive feedback.
+       - Use of JavaScript to create a simple FAQ section, where clicking a question reveals the answer dynamically.
+       - Use of the Document Object Model (DOM) to make changes to the content of the page without having to reload the page completely.
+       - Ensure the website meets web accessibility standards and test for common functionality issues in HTML, CSS, and JavaScript.
+ -->
+
+
+<!-- Sources:
+  
+    Machajewski, S. (2021, September 15) What is an HTML Document? - Structure, Types & Examples. Study.com. https://study.com/academy/lesson/what-is-an-html-document-structure-types-examples.html
+
+    Aravindan, S. (2021, September 29) HTML 5 Document Structure: Elements & Examples. Study.com. https://study.com/academy/lesson/html-5-document-structure-elements-examples.html
+
+    Kornarakis, I. (2018, December 21) The HTML 5 Canvas: Definition, Purpose & Examples. Study.com. https://study.com/academy/lesson/the-html-5-canvas-definition-purpose-examples.html
+
+    Stanley, L. (2015, October 26) Responsive Web Design: Examples & Explanation. Study.com. https://study.com/academy/lesson/responsive-web-design-examples-explanation.html
+
+    Monteclaro, A. (2025, March 22) Mobile-First Design Principles. Study.com. https://study.com/academy/lesson/mobile-first-design-principles.html
+
+    Chowdhury, S. (2025, March 31) CSS Frameworks for Responsive Design. Study.com. https://study.com/academy/lesson/css-frameworks-for-responsive-design.html
+
+    Cox, R. (2025, March 21) Using Web Content Accessibility Guidelines (WCAG). Study.com. https://study.com/academy/lesson/using-web-content-accessibility-guidelines-wcag.html
+
+    Newton, K. (2024, March 11) What is JavaScript? | Overview, Functions & Examples. Study.com. https://study.com/academy/lesson/what-is-javascript-function-uses-quiz.html
+
+    Sivabalan, V. (2018, December 4) Operators in JavaScript: Definition & Examples. Study.com. https://study.com/academy/lesson/operators-in-javascript-definition-examples.html
+
+    Kypridemos, A. (2024, March 15) The Document Object Model (DOM): Purpose & Function. Study.com. https://study.com/academy/lesson/the-document-object-model-dom-purpose-function.html
+
+    Kypridemos, A. (2018, December 29) Using JavaScript to Work With the Document Object Model: Use & Examples. Study.com. https://study.com/academy/lesson/using-javascript-to-work-with-the-document-object-model-use-examples.html
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="nav-brand">
+            <img class="logo" src="images/restaurant-logo.png" alt="Business Logo">
+            <h1>Catering Business</h1>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="introduction">
+        <h2>Welcome to Our Catering Business</h2>
+        <p>We are dedicated to providing delicious and high-quality catering services for all events.
+        </p>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Event Catering</li>
+            <li>Corporate Catering</li>
+            <li>Wedding Catering</li>
+            <li>Private Party Catering</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>For more information, please visit our contact page.</p>
+        <a href="contact.html">Contact Page</a>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                How far in advance should I book?
+            </button>
+            <p class="faq-answer" id="faq-answer-1" hidden>
+                We recommend booking 2 to 4 weeks in advance so we can secure your preferred date and menu.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                Do you offer vegetarian options?
+            </button>
+            <p class="faq-answer" id="faq-answer-2" hidden>
+                Yes. We offer vegetarian, vegan, and gluten-friendly menu options for all event sizes.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                Can you handle corporate events?
+            </button>
+            <p class="faq-answer" id="faq-answer-3" hidden>
+                Absolutely. We provide full corporate catering support, including setup, service, and cleanup.
+            </p>
+        </div>
+    </section>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+
+</html>
