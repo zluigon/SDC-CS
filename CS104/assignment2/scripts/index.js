@@ -20,6 +20,9 @@ if (contactForm) {
 			message: formData.get("message"),
 		};
 
-		console.log("Contact form submitted:", submission);
+		alert(
+			`Thank you for your message, ${submission.name}! We will get back to you at ${submission.email}.`,
+		);
+		contactForm.reset();
 	});
 }
